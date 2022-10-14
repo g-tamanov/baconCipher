@@ -1,0 +1,103 @@
+//---------------------------------------------------------------------------
+
+#ifndef BaconsCipherProcessorH
+#define BaconsCipherProcessorH
+#include <System.hpp>
+#include <map>
+using namespace std;
+//---------------------------------------------------------------------------
+
+class BaconsCipher
+{
+private: // спецификатор доступа private
+ String gfd="456";
+ wchar_t str;
+
+ String EncryptedMethod1(String);
+ String EncryptedMethod2(String);
+ String EncryptedMethod3(String);
+ String EncryptedMethod4(String);
+
+ String DecryptedMethod1(String);
+ String DecryptedMethod2(String);
+ String DecryptedMethod3(String);
+ String DecryptedMethod4(String);
+
+ struct BaconsCipherEN
+ {
+	String key;
+	String value;
+ };
+ //List<BaconsCipherEN> BaconsCipherENList
+  map <String, String>mp;
+  map <String, String>mpEN;
+  map <String, String>mpRU;
+
+public: // спецификатор доступа public
+	BaconsCipher()
+	{
+	//mpEN
+	mpEN["A"] = "abbbb";
+	mpEN["B"] = "babbb";
+	mpEN["C"] = "bbabb";
+	mpEN["D"] = "abbab";
+	mpEN["E"] = "babba";
+	mpEN["F"] = "ababb";
+	mpEN["G"] = "aabab";
+	mpEN["H"] = "baaba";
+	mpEN["I"] = "bbaab";
+	mpEN["J"] = "abbaa";
+	mpEN["K"] = "aabba";
+	mpEN["L"] = "aaabb";
+	mpEN["M"] = "aaaab";
+	mpEN["N"] = "aaaaa";
+	mpEN["O"] = "baaaa";
+	mpEN["P"] = "bbaaa";
+	mpEN["Q"] = "bbbaa";
+	mpEN["R"] = "abbba";
+	mpEN["S"] = "aabbb";
+	mpEN["T"] = "baabb";
+	mpEN["U"] = "abaab";
+	mpEN["V"] = "aabaa";
+	mpEN["W"] = "aaaba";
+	mpEN["X"] = "baaab";
+	mpEN["Y"] = "abaaa";
+	mpEN["Z"] = "babaa";
+	//mpRU
+    mpRU["А"] = "AAAAA";
+    mpRU["Б"] = "AAAAB";
+    mpRU["В"] = "AAABA";
+    mpRU["Г"] = "AAABB";
+    mpRU["Д"] = "AABAA";
+    mpRU["Е"] = "AABAB";
+    mpRU["Ж"] = "AABBA";
+    mpRU["З"] = "AABBB";
+    mpRU["И"] = "ABAAA";
+    mpRU["Й"] = "ABAAB";
+    mpRU["К"] = "ABABA";
+    mpRU["Л"] = "ABABB";
+    mpRU["М"] = "ABBAA";
+    mpRU["Н"] = "ABBAB";
+    mpRU["О"] = "ABBBA";
+    mpRU["П"] = "ABBBB";
+    mpRU["Р"] = "BAAAA";
+    mpRU["С"] = "BAAAB";
+    mpRU["Т"] = "BAABA";
+    mpRU["У"] = "BAABB";
+    mpRU["Ф"] = "BABAA";
+    mpRU["Х"] = "BABAB";
+    mpRU["Ц"] = "BABBA";
+    mpRU["Ч"] = "BABBB";
+    mpRU["Ш"] = "BBAAA";
+    mpRU["Щ"] = "BBAAB";
+    mpRU["Ъ"] = "BBABA";
+    mpRU["Ы"] = "BBABB";
+    mpRU["Ь"] = "BBBAA";
+    mpRU["Э"] = "BBBAB";
+    mpRU["Ю"] = "BBBBA";
+	mpRU["Я"] = "BBBBB";
+	}; // конструктор класса
+	String Encrypted(String, int, int); //
+	String Decrypted(String, int, int); //
+};
+#endif

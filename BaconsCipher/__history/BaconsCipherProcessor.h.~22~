@@ -1,0 +1,97 @@
+//---------------------------------------------------------------------------
+
+#ifndef BaconsCipherProcessorH
+#define BaconsCipherProcessorH
+#include <System.hpp>
+#include <map>
+using namespace std;
+//---------------------------------------------------------------------------
+
+class BaconsCipher
+{
+private: // спецификатор доступа private
+ String gfd="456";
+ wchar_t str;
+
+ String EncryptedMethod1(String);
+ String EncryptedMethod2(String);
+ String EncryptedMethod3(String);
+ String EncryptedMethod4(String);
+
+ String DecryptedMethod1(String);
+ String DecryptedMethod2(String);
+ String DecryptedMethod3(String);
+ String DecryptedMethod4(String);
+
+ struct BaconsCipherEN
+ {
+	String key;
+	String value;
+ };
+ //List<BaconsCipherEN> BaconsCipherENList
+
+  map <String, String> mpEN;
+
+
+public: // спецификатор доступа public
+	BaconsCipher()
+	{
+	//mpEN
+	mpEN["A"] = "abbbb";
+	mpEN["B"] = "babbb";
+	mpEN["C"] = "bbabb";
+	mpEN["D"] = "abbab";
+	mpEN["E"] = "babba";
+	mpEN["F"] = "ababb";
+	mpEN["G"] = "aabab";
+	mpEN["H"] = "baaba";
+	mpEN["I"] = "bbaab";
+	mpEN["J"] = "abbaa";
+	mpEN["K"] = "aabba";
+	mpEN["L"] = "aaabb";
+	mpEN["M"] = "aaaab";
+	mpEN["N"] = "aaaaa";
+	mpEN["O"] = "baaaa";
+	mpEN["P"] = "bbaaa";
+	mpEN["Q"] = "bbbaa";
+	mpEN["R"] = "abbba";
+	mpEN["S"] = "aabbb";
+	mpEN["T"] = "baabb";
+	mpEN["U"] = "abaab";
+	mpEN["V"] = "aabaa";
+	mpEN["W"] = "aaaba";
+	mpEN["X"] = "baaab";
+	mpEN["Y"] = "abaaa";
+	mpEN["Z"] = "babaa";
+	//mpRU
+	mpEN["A"] = "abbbb";
+	mpEN["B"] = "babbb";
+	mpEN["C"] = "bbabb";
+	mpEN["D"] = "abbab";
+	mpEN["E"] = "babba";
+	mpEN["F"] = "ababb";
+	mpEN["G"] = "aabab";
+	mpEN["H"] = "baaba";
+	mpEN["I"] = "bbaab";
+	mpEN["J"] = "abbaa";
+	mpEN["K"] = "aabba";
+	mpEN["L"] = "aaabb";
+	mpEN["M"] = "aaaab";
+	mpEN["N"] = "aaaaa";
+	mpEN["O"] = "baaaa";
+	mpEN["P"] = "bbaaa";
+	mpEN["Q"] = "bbbaa";
+	mpEN["R"] = "abbba";
+	mpEN["S"] = "aabbb";
+	mpEN["T"] = "baabb";
+	mpEN["U"] = "abaab";
+	mpEN["V"] = "aabaa";
+	mpEN["W"] = "aaaba";
+	mpEN["X"] = "baaab";
+	mpEN["Y"] = "abaaa";
+	mpEN["Z"] = "babaa";
+	}; // конструктор класса
+	String Encrypted(String, int); //
+	String Decrypted(String, int); //
+};
+#endif

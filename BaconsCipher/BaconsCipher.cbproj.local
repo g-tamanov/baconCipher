@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.406,=C:\Users\Dreikond\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.568,=C:\Users\Dreikond\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.653,=C:\Users\Dreikond\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.646,C:\Users\Dreikond\Desktop\C++\BaconsCipher\BaconsCipherPCH1.h=C:\Users\Dreikond\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.443,C:\Users\Dreikond\Desktop\C++\BaconsCipher\BaconsCipherProseser.h=C:\Users\Dreikond\Desktop\C++\BaconsCipher\BaconsCipherProcesor.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.635,C:\Users\Dreikond\Desktop\C++\BaconsCipher\Unit1.cpp=C:\Users\Dreikond\Desktop\C++\BaconsCipher\BaconsCipherProseser.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.935,=C:\Users\Dreikond\Desktop\C++\BaconsCipher\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.564,C:\Users\Dreikond\Desktop\C++\BaconsCipher\BaconsCipher.cbproj=C:\Users\Dreikond\Documents\Embarcadero\Studio\Projects\Project1.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.635,C:\Users\Dreikond\Desktop\C++\BaconsCipher\Unit1.h=C:\Users\Dreikond\Desktop\C++\BaconsCipher\BaconsCipherProseser.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.134,C:\Users\Dreikond\Desktop\C++\BaconsCipher\BaconsCipherPCH1.h=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.226,=C:\Users\Dreikond\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.473,=C:\Users\Dreikond\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.970,C:\Users\Dreikond\Desktop\C++\BaconsCipher\BaconsCipherProcesor.cpp=C:\Users\Dreikond\Desktop\C++\BaconsCipher\BaconsCipherProcessor.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.565,C:\Users\Dreikond\Desktop\C++\BaconsCipher\MainForm.cpp=C:\Users\Dreikond\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.586,=C:\Users\Dreikond\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.970,C:\Users\Dreikond\Desktop\C++\BaconsCipher\BaconsCipherProcesor.h=C:\Users\Dreikond\Desktop\C++\BaconsCipher\BaconsCipherProcessor.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.565,C:\Users\Dreikond\Desktop\C++\BaconsCipher\MainForm.h=C:\Users\Dreikond\Documents\Embarcadero\Studio\Projects\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.443,C:\Users\Dreikond\Desktop\C++\BaconsCipher\BaconsCipherProseser.cpp=C:\Users\Dreikond\Desktop\C++\BaconsCipher\BaconsCipherProcesor.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.565,C:\Users\Dreikond\Desktop\C++\BaconsCipher\MainForm.dfm=C:\Users\Dreikond\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+  </Transactions>
+	<BT_BuildType>Debug</BT_BuildType>
+</BorlandProject>

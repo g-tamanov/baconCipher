@@ -1,0 +1,75 @@
+object FormMain: TFormMain
+  Left = 0
+  Top = 0
+  BiDiMode = bdLeftToRight
+  BorderStyle = bsSingle
+  Caption = 'BaconsCipher'
+  ClientHeight = 410
+  ClientWidth = 310
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  ParentBiDiMode = False
+  Scaled = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object LabeledEditDecrypted: TLabeledEdit
+    Left = 36
+    Top = 132
+    Width = 225
+    Height = 21
+    DoubleBuffered = False
+    EditLabel.Width = 146
+    EditLabel.Height = 13
+    EditLabel.Caption = #1056#1072#1089#1096#1080#1092#1088#1086#1074#1072#1085#1085#1086#1077' '#1089#1086#1086#1073#1097#1077#1085#1080#1077
+    ParentDoubleBuffered = False
+    TabOrder = 0
+  end
+  object LabeledEditEncrypted: TLabeledEdit
+    Left = 36
+    Top = 208
+    Width = 225
+    Height = 21
+    EditLabel.Width = 141
+    EditLabel.Height = 13
+    EditLabel.Caption = #1047#1072#1096#1080#1092#1088#1086#1074#1072#1085#1085#1086#1077' '#1089#1086#1086#1073#1097#1077#1085#1080#1077
+    TabOrder = 1
+  end
+  object ButtonDecrypted: TButton
+    Left = 96
+    Top = 305
+    Width = 105
+    Height = 25
+    Caption = #1056#1072#1089#1096#1080#1092#1088#1086#1074#1072#1090#1100
+    TabOrder = 2
+    OnClick = ButtonDecryptedClick
+  end
+  object ButtonEncrypted: TButton
+    Left = 96
+    Top = 336
+    Width = 105
+    Height = 25
+    Caption = #1047#1072#1096#1080#1092#1088#1086#1074#1072#1090#1100
+    TabOrder = 3
+  end
+  object BaconsCipherMode: TRadioGroup
+    Left = 24
+    Top = 40
+    Width = 268
+    Height = 33
+    Caption = #1042#1099#1073#1086#1088' '#1084#1077#1090#1086#1076#1072
+    Columns = 4
+    Items.Strings = (
+      #1052#1077#1090#1086#1076' 1'
+      #1052#1077#1090#1086#1076' 2'
+      #1052#1077#1090#1086#1076' 3'
+      #1052#1077#1090#1086#1076' 4')
+    ParentBackground = False
+    ParentColor = False
+    TabOrder = 4
+  end
+end

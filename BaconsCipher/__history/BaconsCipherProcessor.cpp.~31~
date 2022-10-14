@@ -1,0 +1,129 @@
+// ---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include "BaconsCipherProcessor.h"
+#include <System.hpp>
+#include <stdio.h>
+#include <string.h>
+#include <ustring.h>
+#include <map>
+#include <Vcl.Forms.hpp>
+// ---------------------------------------------------------------------------
+
+String BaconsCipher::Decrypted(String str, int num, int ln) {
+	if (ln == 0)
+		mp = mpRU_D;
+	else
+		mp = mpEN_D;
+
+	switch (num) {
+	case 0:
+		str = DecryptedMethod1(str);
+		break;
+	case 1:
+		str = DecryptedMethod2(str);
+		break;
+	case 2:
+		str = DecryptedMethod3(str);
+		break;
+	case 3:
+		str = DecryptedMethod4(str);
+		break;
+	}
+	return str;
+};
+
+String BaconsCipher::DecryptedMethod1(String str) {
+	String tmp = "";
+	String final = "";
+	int i = 0;
+	try {
+		for (auto& c : str) {
+			if (i == 4) {
+				final += mp.at(tmp);
+				tmp = "";
+				i = 0;
+			}
+			tmp += c;
+			i++;
+		}
+	}
+	catch (const std::exception& e) {
+		// cerr << e.what();
+		Application->MessageBox
+			(L"Допустимы только буквы кириллицы или латиницы.",
+		L"Ошибка", MB_OK);
+		// std::cout << tmp;
+		final = "";
+	}
+
+	return final;
+};
+
+String BaconsCipher::DecryptedMethod2(String str) {
+	return "DecryptedMethod2";
+};
+
+String BaconsCipher::DecryptedMethod3(String str) {
+	return "DecryptedMethod3";
+};
+
+String BaconsCipher::DecryptedMethod4(String str) {
+	return "DecryptedMethod4";
+};
+
+String BaconsCipher::Encrypted(String str, int num, int ln) {
+	if (ln == 0)
+		mp = mpRU_E;
+	else
+		mp = mpEN_E;
+
+	switch (num) {
+	case 0:
+		str = EncryptedMethod1(str);
+		break;
+	case 1:
+		str = EncryptedMethod2(str);
+		break;
+	case 2:
+		str = EncryptedMethod3(str);
+		break;
+	case 3:
+		str = EncryptedMethod4(str);
+		break;
+	}
+	return str;
+};
+
+String BaconsCipher::EncryptedMethod1(String str) {
+	String tmp;
+	try {
+		for (auto&c : str) {
+			tmp += mp.at((wchar_t)std::toupper(c));
+		}
+	}
+	catch (const std::exception& e) {
+		// cerr << e.what();
+		Application->MessageBox
+			(L"Допустимы только буквы кириллицы или латиницы.",
+		L"Ошибка", MB_OK);
+		tmp = "";
+	}
+
+	return tmp;
+};
+
+String BaconsCipher::EncryptedMethod2(String str) {
+	return "EncryptedMethod2";
+};
+
+String BaconsCipher::EncryptedMethod3(String str) {
+	return "EncryptedMethod3";
+};
+
+String BaconsCipher::EncryptedMethod4(String str) {
+	return "EncryptedMethod4";
+};
+
+#pragma package(smart_init)

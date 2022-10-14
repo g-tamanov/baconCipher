@@ -1,0 +1,85 @@
+// ---------------------------------------------------------------------------
+
+#ifndef BaconsCipherProcessorH
+#define BaconsCipherProcessorH
+#include <System.hpp>
+#include <map>
+using namespace std;
+#include <System.Character.hpp>
+// ---------------------------------------------------------------------------
+
+class BaconsCipher {
+private: // спецификатор доступа private
+
+	String EncryptedMethod1(String);
+	String EncryptedMethod2(String);
+	String EncryptedMethod3(String);
+	String EncryptedMethod4(String);
+
+	String DecryptedMethod1(String);
+	String DecryptedMethod2(String);
+	String DecryptedMethod3(String);
+	String DecryptedMethod4(String);
+
+	map<String, String> *mp;
+	map<String, String>mpEN_D;
+	map<String, String>mpRU_D;
+	map<String, String>mpEN_E;
+	map<String, String>mpRU_E;
+
+	void mp_toLower(map<String, String> *mp_in) {
+		for (const auto&kv : (*mp_in)) {
+			(*mp_in)[kv.second] = kv.first.LowerCase();
+		}
+	}
+
+	void EtoD(map<String, String> *mp_in, map<String, String> *mp_out) {
+		for (const auto&kv : (*mp_in)) {
+			(*mp_out)[kv.second] = kv.first;
+		}
+	};
+
+public: // спецификатор доступа public
+	BaconsCipher() {
+		// mpEN_E
+		mpEN_E["A"] = "abbbb";
+		mpEN_E["B"] = "babbb";
+		mpEN_E["C"] = "bbabb";
+		mpEN_E["D"] = "abbab";
+		mpEN_E["E"] = "babba";
+		mpEN_E["F"] = "ababb";
+		mpEN_E["G"] = "aabab";
+		mpEN_E["H"] = "baaba";
+		mpEN_E["I"] = "bbaab";
+		mpEN_E["J"] = "abbaa";
+		mpEN_E["K"] = "aabba";
+		mpEN_E["L"] = "aaabb";
+		mpEN_E["M"] = "aaaab";
+		mpEN_E["N"] = "aaaaa";
+		mpEN_E["O"] = "baaaa";
+		mpEN_E["P"] = "bbaaa";
+		mpEN_E["Q"] = "bbbaa";
+		mpEN_E["R"] = "abbba";
+		mpEN_E["S"] = "aabbb";
+		mpEN_E["T"] = "baabb";
+		mpEN_E["U"] = "abaab";
+		mpEN_E["V"] = "aabaa";
+		mpEN_E["W"] = "aaaba";
+		mpEN_E["X"] = "baaab";
+		mpEN_E["Y"] = "abaaa";
+		mpEN_E["Z"] = "babaa";
+		// mpRU_E
+		mpRU_E["А"] = "AAAAA";
+		mpRU_E["Б"] = "AAAAB";
+		mpRU_E["В"] = "AAABA";
+
+		mp_toLower(&mpEN_E);
+		mp_toLower(&mpRU_E);
+		EtoD(&mpEN_E, &mpEN_D);
+		EtoD(&mpRU_E, &mpRU_D);
+	}; // конструктор класса
+	String Encrypted(String, int, int); //
+	String Decrypted(String, int, int); //
+};
+
+#endif

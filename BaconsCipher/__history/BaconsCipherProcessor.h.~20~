@@ -1,0 +1,41 @@
+//---------------------------------------------------------------------------
+
+#ifndef BaconsCipherProcessorH
+#define BaconsCipherProcessorH
+#include <System.hpp>
+#include <map>
+using namespace std;
+//---------------------------------------------------------------------------
+
+class BaconsCipher
+{
+private: // спецификатор доступа private
+ String gfd="456";
+ wchar_t str;
+
+ String EncryptedMethod1(String);
+ String EncryptedMethod2(String);
+ String EncryptedMethod3(String);
+ String EncryptedMethod4(String);
+
+ String DecryptedMethod1(String);
+ String DecryptedMethod2(String);
+ String DecryptedMethod3(String);
+ String DecryptedMethod4(String);
+
+ struct BaconsCipherEN
+ {
+	String key;
+	String value;
+ };
+ //List<BaconsCipherEN> BaconsCipherENList
+
+map <String, String> mpEN;
+
+
+public: // спецификатор доступа public
+	//BaconsCipherProcessor(String); // конструктор класса
+	String Encrypted(String, int); //
+	String Decrypted(String, int); //
+};
+#endif
